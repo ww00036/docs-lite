@@ -1,0 +1,69 @@
+:root {
+  --vp-c-brand-1: #2e8555;
+  --vp-c-brand-2: #33925d;
+  --vp-c-brand-3: #359962;
+}
+
+.dark {
+  --vp-c-brand-1: #25c2a0;
+  --vp-c-brand-2: #29d5b0;
+  --vp-c-brand-3: #32d8b4;
+}
+
+/* 默认：段落内图片按行内处理 */
+.vp-doc p img {
+  display: inline;
+  vertical-align: middle;
+  height: 1.5em;
+  margin: 0 4px;
+  margin-bottom: 2px;
+}
+
+/* 独立图片段落会被 markdown-it-image-figures 转成 figure.block-image */
+.vp-doc figure {
+  margin: 16px 0;
+}
+
+.vp-doc figure img.block-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.vp-doc figure p {
+  margin: 0;
+}
+
+.vp-doc h2{
+  margin: 0 0 16px 0;
+  border: none;
+}
+
+.vp-doc blockquote{
+  padding: 10px 20px;
+  background-color: #54d0ec26;
+  border-radius: 5px;
+  border-left: 4px solid #4cb3d4;
+}
+
+.VPNavBar.has-sidebar .divider{
+  background-color: var(--vp-c-gutter);
+}
+
+@media (min-width: 960px) {
+  .VPSidebar{
+    padding-top: 0;
+    margin-top: var(--vp-nav-height);
+  }
+  .VPNavBarTitle.has-sidebar .title{
+    border: none;
+  }
+  .VPNavBar:not(.home.top) .divider-line{
+    background-color: transparent !important;
+  }
+}
+
+
+.vp-doc th,
+.vp-doc td {
+  text-align: center;
+}
